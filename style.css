@@ -29,8 +29,8 @@ body{
 	border-radius: 1vmin;
 }
 .tile{
-	--y: 0;
-	--x: 0;
+	--y: 1;
+	--x: 2;
 	position: absolute;
 	top: calc(var(--y) * (var(--cell-size) + var(--cell-gap)));
 	left: calc(var(--x) * (var(--cell-size) + var(--cell-gap)));
@@ -45,4 +45,12 @@ body{
 	font-weight: bold;
 	background-color: #fff;
 	color: #000;
+	transition: 100ms;
+	animation: show 200ms;
+}
+@keyframes show{
+	0%{
+		opacity: 0.5;
+		transform: scale(0);
+	}
 }
